@@ -26,9 +26,10 @@ def get_fibonacci_gen(n):
     f = fibonacci_gen()
     for i in range(n):
         num = next(f)
+        # num = f.__next__()
     return num
 
 
 if __name__ == '__main__':
-    print(get_fibonacci(8))
+    # print(get_fibonacci(8))
     print(get_fibonacci_gen(8))
