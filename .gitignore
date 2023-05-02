@@ -1,1 +1,4 @@
 small_tasks/test.py
+.idea
+*.log
+*.pyc
