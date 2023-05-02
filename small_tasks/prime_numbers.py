@@ -13,4 +13,4 @@ def solution(n):
     return res
 
 
-print(solution(110))
+print(*solution(110))

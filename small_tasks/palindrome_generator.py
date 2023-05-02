@@ -6,14 +6,18 @@ def infinite_generator():
 
 
 def is_polyndrome(num):
-    if num <= 10:
-        return False
-    reversed_num = 0
-    tmp = num
-    while tmp>0:
-        reversed_num = reversed_num*10 + tmp%10
-        tmp = tmp//10
-    return num == reversed_num
+    s = str(num)
+    rs = s[::-1].replace('0', '')
+    return rs == s
+
+    # if num <= 10:
+    #     return False
+    # reversed_num = 0
+    # tmp = num
+    # while tmp>0:
+    #     reversed_num = reversed_num*10 + tmp%10
+    #     tmp = tmp//10
+    # return num == reversed_num
 
 
 if __name__ == '__main__':

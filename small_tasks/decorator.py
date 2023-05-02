@@ -1,7 +1,7 @@
 def my_decorator(f):
-    def wrap_func(**kwargs):
+    def wrap_func(*args, **kwargs):
         print('Code before func')
-        f(**kwargs)
+        f(*args, **kwargs)
         print('Code after func')
     return wrap_func
 
