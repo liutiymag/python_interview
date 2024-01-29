@@ -3,13 +3,15 @@
 # Definition: A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
 def solution(n):
-    res = []
-    for x in range(2, n+1):
-        for i in range(2, x if x < 8 else 8):
-            if x % i == 0:
-                break
-        else:
-            res.append(x)
+    prime = [True] * n
+    if n < 2:
+        return 0
+    prime[0], prime[1] = False, False
+    for i in range(2, int(n ** 0.5) + 1):
+        if prime[i]:
+            for j in range(i + i, n, i):
+                prime[j] = False
+    res = [i for i, v in enumerate(prime) if v]
     return res
 
 

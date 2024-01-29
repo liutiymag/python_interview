@@ -6,9 +6,7 @@ def infinite_generator():
 
 
 def is_polyndrome(num):
-    s = str(num)
-    rs = s[::-1].replace('0', '')
-    return rs == s
+    return str(num) == str(num)[::-1]
 
     # if num <= 10:
     #     return False
