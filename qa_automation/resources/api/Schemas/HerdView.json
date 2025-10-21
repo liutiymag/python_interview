@@ -1,0 +1,73 @@
+{   
+    "additionalProperties": false,
+    "minProperties": 15,
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "modifyDate": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "version": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "ACTIVE",
+          "INACTIVE"
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "location": {
+        "$ref": "GeoJsonPoint.json"
+      },
+      "slots": {
+        "type": "array",
+        "items": {
+          "$ref": "HerdSlotView.json"
+        }
+      },
+      "state": {
+        "type": "string",
+        "enum": [
+          "IN_PROGRESS",
+          "COMPLETE"
+        ]
+      },
+      "count": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "currentGlobalTime": {
+        "type": ["integer", "null"]
+      },
+      "currentActions": {
+        "type": "array",
+        "items": {
+          "$ref": "HerdGlobalActionView.json"
+        }
+      },
+      "nextGlobalTime": {
+        "type": ["integer", "null"]
+      },
+      "nextActions": {
+        "type": "array",
+        "items": {
+          "$ref": "HerdGlobalActionView.json"
+        }
+      },
+      "movementAlert": {
+        "type": "boolean"
+      },
+      "color": {
+        "type": "string"
+      }
+    }
+  }

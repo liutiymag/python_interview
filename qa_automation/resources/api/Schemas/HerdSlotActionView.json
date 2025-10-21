@@ -1,0 +1,40 @@
+{
+    "additionalProperties": false,
+    "minProperties": 8,
+    "type": "object",
+    "properties": {
+      "index": {
+        "type": ["integer", "null"]
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "NONE",
+          "DISABLE_SECRET_PROJECT",
+          "ENABLE_SECRET_PROJECT",
+          "DISABLE_EDGE",
+          "ENABLE_EDGE",
+          "REGION_CHANGE"
+        ]
+      },
+      "timeOffset": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "edgeMask": {
+        "type": ["integer", "null"]
+      },
+      "numSteps": {
+        "type": ["integer", "null"]
+      },
+      "timeDelta": {
+        "type": ["integer", "null"]
+      },
+      "soundDelta": {
+        "type": ["integer", "null"]
+      },
+      "shockDelta": {
+        "type": ["integer", "null"]
+      }
+    }
+}

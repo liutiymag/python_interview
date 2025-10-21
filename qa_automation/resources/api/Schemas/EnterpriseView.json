@@ -1,0 +1,32 @@
+{   
+    "additionalProperties": false,
+    "minProperties": 6,
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "modifyDate": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "version": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "ACTIVE",
+          "INACTIVE"
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "SECRET_PROJECT": {
+        "type": ["boolean", "null"]
+      }
+    }
+  }

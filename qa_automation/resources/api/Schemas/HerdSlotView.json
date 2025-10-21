@@ -1,0 +1,51 @@
+{
+    "additionalProperties": false,
+    "minProperties": 11,
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": ["string", "null"]
+      },
+      "index": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "currentPaddockId": {
+        "type": ["string", "null"]
+      },
+      "currentActive": {
+        "type": "boolean"
+      },
+      "currentActions": {
+        "type": "array",
+        "items": {
+          "$ref": "HerdSlotActionView.json"
+        }
+      },
+      "currentWhen": {
+        "type": ["integer", "null"]
+      },
+      "nextPaddockId": {
+        "type": ["string", "null"]
+      },
+      "nextActive": {
+        "type": "boolean"
+      },
+      "nextActions": {
+        "type": "array",
+        "items": {
+          "$ref": "HerdSlotActionView.json"
+        }
+      },
+      "nextWhen": {
+        "type": ["integer", "null"]
+      },
+      "state": {
+        "type": "string",
+        "enum": [
+          "IN_PROGRESS",
+          "COMPLETE"
+        ]
+      }
+    }
+}

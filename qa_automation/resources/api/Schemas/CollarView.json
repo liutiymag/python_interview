@@ -1,0 +1,158 @@
+{   
+    "additionalProperties": false,
+    "minProperties": 27,
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "modifyDate": {
+            "type": "integer",
+            "format": "int64"
+        },
+        "version": {
+            "type": "integer",
+            "format": "int32"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+        },
+        "transportId": {
+            "type": "string"
+        },
+        "location": {
+            "$ref": "GeoJsonPoint.json"
+        },
+        "lastLocation": {
+            "type": "integer"
+        },
+        "herdId": {
+            "type": "string"
+        },
+        "cattleId": {
+            "type": "string"
+        },
+        "earTag": {
+            "type": "string"
+        },
+        "soundEnabled": {
+            "type": "boolean"
+        },
+        "shockEnabled": {
+            "type": "boolean"
+        },
+        "memoryState": {
+            "type": "string",
+            "enum": [
+              "EQUALS",
+              "NOT_EQUALS",
+              "ERROR"
+            ]
+        },
+        "trackingState": {
+            "type": "string",
+            "enum": [
+              "BASIC_TRACKING",
+              "SECRET_PROJECT_ENABLED",
+              "SECRET_PROJECT_TRACKING",
+              "SOUND_REGION",
+              "SHOCK_REGION",
+              "SOUND_REGION_FACING_AWAY",
+              "SHOCK_REGION_FACING_AWAY",
+              "OUT_OF_BOUNDS",
+              "SECRET_PROJECT_TRANSITION"
+            ]
+        },
+        "managementState": {
+            "type": "string",
+            "enum": [
+              "MANAGED",
+              "UNMANAGED"
+            ]
+        },
+        "protocolVersion": {
+            "type": "string",
+            "enum": [
+              "VERSION_2",
+              "VERSION_3",
+              "VERSION_4",
+              "VERSION_5"
+            ]
+        },
+        "functional": {
+            "type": ["boolean", "null"]
+        },
+        "operatingState": {
+            "type": "string",
+            "enum": [
+              "NORMAL",
+              "DEAD_BATTERY"
+            ]
+        },
+        "slotComplete": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+        },
+        "batteryInstall": {
+            "type": "integer",
+            "format": "int64"
+        },
+        "batteryDesired": {
+            "type": "integer",
+            "format": "int64"
+        },
+        "batteryUsed": {
+            "type": "number",
+            "format": "double"
+        },
+        "alarms": {
+            "type": "integer",
+            "format": "int64"
+        },
+        "alarmTypes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "LOW_BATTERY_WARNING",
+                "LOW_BATTERY_CRITICAL",
+                "SHOCK_DISABLED",
+                "SOUND_DISABLED",
+                "HEARTBEAT_TIMEOUT",
+                "IC2_BUS_FAULT",
+                "TX_QUEUE_LP_FULL",
+                "TX_QUEUE_HP_FULL",
+                "GPS_SELF_TEST_FAIL",
+                "ACCEL_SELF_TEST_FAIL",
+                "MAGNET_SELF_TEST_FAIL",
+                "GYRO_SELF_TEST_FAIL",
+                "MMU_ACCESS_FAIL",
+                "BATTERY_END_OF_LIFE_WARNING",
+                "BATTERY_INSTALL_TIME_WARNING",
+                "NVM_BLOCK_CRC_MISMATCH",
+                "MANAGEMENT_DISABLED",
+                "POWER_ON_RESET",
+                "TX_QUEUE_LP_MSG_DROP",
+                "TX_QUEUE_HP_MSG_DROP"
+              ]
+            }
+        },
+        "noUnregisteredMessages": {
+            "type": "boolean"
+        },
+        "pendingMessage": {
+            "type": ["string", "null"]
+        },
+        "nfcSn": {
+            "type": "string"
+        }
+    }
+}

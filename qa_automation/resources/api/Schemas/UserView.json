@@ -1,0 +1,153 @@
+{
+    "additionalProperties": false,
+    "minProperties": 27,
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "modifyDate": {
+        "type": ["integer", "null"],
+        "format": "int64"
+      },
+      "version": {
+        "type": ["integer", "null"],
+        "format": "int32"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "ACTIVE",
+          "INACTIVE"
+        ]
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "ROLE_SECRET_PROJECT",
+          "ROLE_SYSTEM",
+          "ROLE_ADMIN",
+          "ROLE_MANAGER",
+          "ROLE_USER"
+        ]
+      },
+      "actingRole": {
+        "type": ["string", "null"],
+        "enum": [
+          null,
+          "ROLE_SECRET_PROJECT",
+          "ROLE_SYSTEM",
+          "ROLE_ADMIN",
+          "ROLE_MANAGER",
+          "ROLE_USER"
+        ]
+      },
+      "changePassword": {
+        "type": "boolean"
+      },
+      "locked": {
+        "type": "boolean"
+      },
+      "username": {
+        "type": "string"
+      },
+      "firstName": {
+        "type": ["string", "null"]
+      },
+      "lastName": {
+        "type": ["string", "null"]
+      },
+      "description": {
+        "type": ["string", "null"]
+      },
+      "street1": {
+        "type": ["string", "null"]
+      },
+      "street2": {
+        "type": ["string", "null"]
+      },
+      "city": {
+        "type": ["string", "null"]
+      },
+      "state": {
+        "type": ["string", "null"]
+      },
+      "zip": {
+        "type": ["string", "null"]
+      },
+      "cellPhone": {
+        "type": ["string", "null"]
+      },
+      "homePhone": {
+        "type": ["string", "null"]
+      },
+      "timeView": {
+        "type": ["string", "null"],
+        "enum": [
+          "LOCAL_TIME_VIEW",
+          "FARM_TIME_VIEW",
+          "GMT_TIME_VIEW"
+        ]
+      },
+      "pages": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "MANAGEMENT",
+            "GRAZING",
+            "CATTLE",
+            "COLLAR",
+            "HERD",
+            "LANDMARK",
+            "PADDOCK",
+            "CALENDAR",
+            "ALERT",
+            "USER",
+            "ENTERPRISE",
+            "MESSAGE",
+            "HELP",
+            "ABOUT"
+          ]
+        }
+      },
+      "viewFarmId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "enterpriseId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "farmId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "measurementsView": {
+        "type": "string",
+        "enum": [
+          "IMPERIAL",
+          "METRIC"
+        ]
+      },
+      "dateFormatView": {
+        "type": "string",
+        "enum": [
+          "MM_DD_YYYY",
+          "DD_MM_YYYY",
+          "YYYY_MM_DD"
+        ]
+      },
+      "timeFormatView": {
+        "type": "string",
+        "enum": [
+          "H_12",
+          "H_24"
+        ]
+      },
+      "refreshToken": {
+        "type": "string"
+      }
+    }
+}

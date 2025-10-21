@@ -1,0 +1,29 @@
+{
+    "additionalProperties": false,
+    "minProperties": 3,
+    "type": "object",
+    "properties": {
+      "index": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "types": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "DISABLE_SHOCK",
+            "DISABLE_SOUND",
+            "DISABLE_SECRET_PROJECTS",
+            "DELETE_SECRET_PROJECTS",
+            "DEVICE_RESET"
+          ]
+        }
+      },
+      "timeOffset": {
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+}

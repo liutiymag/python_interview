@@ -1,0 +1,70 @@
+{    
+    "additionalProperties": false,
+    "minProperties": 18,
+    "type": "object",
+    "properties": {      
+      "id": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "modifyDate": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "version": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "ACTIVE",
+          "INACTIVE"
+        ]
+      },
+      "earTag": {
+        "type": "string"
+      },
+      "collarId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "transportId": {
+        "type": "string"
+      },
+      "electronicId": {
+        "type": "string"
+      },
+      "regulatoryId": {
+        "type": "string"
+      },
+      "phNumber": {
+        "type": "string"
+      },
+      "brand": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "breed": {
+        "type": "string"
+      },
+      "color": {
+        "type": "string"
+      },
+      "horn": {
+        "type": "string"
+      },
+      "birth": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "nfcSn": {
+        "type": ["string", "null"]
+      }
+    }    
+}

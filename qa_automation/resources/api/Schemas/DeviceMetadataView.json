@@ -1,0 +1,71 @@
+{   
+    "additionalProperties": false,
+    "minProperties": 16,
+    "type": "object",
+    "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "modifyDate": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "version": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "INACTIVE"
+          ]
+        },
+        "serialNumber": {
+          "type": "string"
+        },
+        "manufacturingWorkOrder": {
+          "type": "string"
+        },
+        "partNumber": {
+          "type": "string"
+        },
+        "partRevision": {
+          "type": "string"
+        },
+        "manufacturerIdNumber": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "manufacturingLineNumber": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "manufacturingDeviationId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "manufacturingPosixTime": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "firmwareVersionBuildStamp": {
+          "type": "string"
+        },
+        "cpuDebugId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "cpuId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "cpuUid": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+    }
+}

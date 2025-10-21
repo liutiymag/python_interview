@@ -1,0 +1,23 @@
+platforms:
+  - os: OS X
+    osVersion: Sequoia
+    browserName: Safari
+    browserVersion: latest
+  - browserName: Chrome
+    os: Windows
+    osVersion: 11
+    browserVersion: latest
+parallelsPerPlatform: 1
+browserstackLocal: true
+buildName: SECRET_PROJECT-bstack
+buildIdentifier: ${BUILD_NUMBER}
+projectName: SECRET_PROJECT UI Automation
+testContextOptions:
+  skipSessionName: true
+testObservability: false
+networkLogs: true
+consoleLogs: info
+appiumLogs: false
+video: true
+framework: robot
+resolution: 1920x1080

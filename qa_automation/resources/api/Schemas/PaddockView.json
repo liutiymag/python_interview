@@ -1,0 +1,84 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "minProperties": 17,
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "modifyDate": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "version": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "ACTIVE",
+          "INACTIVE"
+        ]
+      },
+      "enterpriseId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "farmId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "name": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "NONE",
+          "INCLUSION",
+          "EXCLUSION",
+          "MOVEMENT"
+        ]
+      },
+      "createDate": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "location": {
+        "type": "object"
+      },
+      "soundZone": {
+        "type": ["object", "null"]
+      },
+      "shockZone": {
+        "type": ["object", "null"]
+      },
+      "soundZoneEx": {
+        "type": ["object", "null"]
+      },
+      "shockZoneEx": {
+        "type": ["object", "null"]
+      },
+      "shockWidth": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "soundWidth": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "alert": {
+        "type": "boolean"
+      },
+      "SECRET_PROJECTEdge": {
+        "uniqueItems": true,
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+}

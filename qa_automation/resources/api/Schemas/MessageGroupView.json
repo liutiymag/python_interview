@@ -1,0 +1,35 @@
+{   
+    "type": "object",
+    "additionalProperties": false,
+    "minProperties": 6,    
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+        "modifyDate": {
+            "type": "integer",
+            "format": "int64"
+          },
+        "version": {
+            "type": "integer",
+            "format": "int32"
+          },
+        "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+        },
+        "name": {
+            "type": "string"
+        },
+        "messages": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "additionalProperties": false,
+    "minProperties": 16,
+	"type": "object",
+	"properties": {
+	  "id": {
+		"type": "string",
+		"format": "uuid"
+	  },
+	  "modifyDate": {
+		"type": "integer",
+		"format": "int64"
+	  },
+	  "version": {
+		"type": "integer",
+		"format": "int32"
+	  },
+	  "status": {
+		"type": "string",
+		"enum": [
+		  "ACTIVE",
+		  "INACTIVE"
+		]
+	  },
+	  "enterpriseId": {
+		"type": "string",
+		"format": "uuid"
+	  },
+	  "name": {
+		"type": "string"
+	  },
+	  "transportId": {
+		"type": "string"
+	  },
+	  "location": {
+		"$ref": "PointModel.json"
+	  },
+	  "gridSize": {
+		"type": ["number", "null"],
+		"format": "double"
+	  },
+	  "paddockLength": {
+		"type": ["number", "null"],
+		"format": "double"
+	  },
+	  "timeZone": {
+		"type": "string"
+	  },
+	  "inclusionShockWidth": {
+		"type": "integer",
+		"format": "int32"
+	  },
+	  "inclusionSoundWidth": {
+		"type": "integer",
+		"format": "int32"
+	  },
+	  "exclusionShockWidth": {
+		"type": "integer",
+		"format": "int32"
+	  },
+	  "exclusionSoundWidth": {
+		"type": "integer",
+		"format": "int32"
+	  },
+	  "movementRate": {
+		"type": "number",
+		"format": "double"
+	  },
+	  "herdReceiptThreshold": {
+		"type": "integer",
+		"format": "int32"
+	  }
+	}
+}
